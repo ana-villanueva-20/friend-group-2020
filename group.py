@@ -3,6 +3,7 @@
 # Your code to go here...
 
 import json
+import statistics
 
 group = {
     "Jill": {
