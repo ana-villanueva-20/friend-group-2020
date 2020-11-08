@@ -37,6 +37,15 @@ group = {
     }
 }
 
+max_age = max(person['age'] for name, person in group.items())
+print(max_age)
+avg_rels = statistics.mean(len(person['relations']) for name, person in group.items())
+print(avg_rels)
+max_age_1_rel = max(person['age'] for name, person in group.items() if len(person['relations']) > 0)
+print(max_age_1_rel)
+max_age_1_friend = max(person['age'] for name, person in group.items() if 'friend' in person['relations'].values())
+print(max_age_1_friend)
+
 with open('my_group.json', 'w') as f:
     json.dump(group, f, indent=4)
 
