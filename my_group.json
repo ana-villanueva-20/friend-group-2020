@@ -1,10 +1,4 @@
-"""An example of how to represent a group of acquaintances in Python."""
-
-# Your code to go here...
-
-import json
-
-group = {
+{
     "Jill": {
         "age": 26,
         "job": "biologist",
@@ -36,13 +30,3 @@ group = {
         }
     }
 }
-
-with open('my_group.json', 'w') as f:
-    json.dump(group, f, indent=4)
-
-
-with open('my_group.json', 'r') as json_file:
-    my_group = json_file.read()
-
-
-print(my_group)
